@@ -1,0 +1,516 @@
+{
+    "graph": {
+        "directed": false,
+        "type": "ML experiment",
+        "label": "graph label",
+        "metadata": {
+            "user-defined": "values"
+        },
+        "nodes": [
+            {
+                "id": "0",
+                "label": "dataset",
+                "property": {
+                    "name": "Kaggle House Price",
+                    "url": "https://kaggle.com",
+                    "owner": "Kaggle",
+                    "access": "public"
+                }
+            },
+            {
+                "id": "1",
+                "label": "operation",
+                "subclass": "filter",
+                "property": {
+                    "field": "type",
+                    "condition": "house",
+                    "description": null
+                }
+            },
+            {
+                "id": "2",
+                "label": "operation",
+                "subclass": "filter",
+                "property": {
+                    "field": "location",
+                    "condition": "Ames, Iowa",
+                    "description": null
+                }
+            },
+            {
+                "id": "3",
+                "label": "operation",
+                "subclass": "filter",
+                "property": {
+                    "field": "date",
+                    "condition": "btw(2006, 2010)",
+                    "description": null
+                }
+            },
+            {
+                "id": "4",
+                "label": "population",
+                "property": {
+                    "description": "root"
+                }
+            },
+            {
+                "id": "5",
+                "label": "population",
+                "property": {
+                    "description": "all homes"
+                }
+            },
+            {
+                "id": "6",
+                "label": "population",
+                "property": {
+                    "description": "all homes in Ames, Iowa"
+                }
+            },
+            {
+                "id": "7",
+                "label": "population",
+                "property": {
+                    "description": "all homes in Ames, Iowa between 2006 and 2010"
+                }
+            },
+            {
+                "id": "8",
+                "label": "transformation",
+                "property": {
+                    "transform_type": "dummification"
+                }
+            },
+            {
+                "id": "9",
+                "label": "transformation",
+                "property": {
+                    "transform_type": "log"
+                }
+            },
+            {
+                "id": "10",
+                "label": "variable",
+                "property": {
+                    "name": "LotArea",
+                    "alias": null,
+                    "variableType": "continuous",
+                    "variableTypeDescription": null,
+                    "description": "Lot size in square feet"
+                }
+            },
+            {
+                "id": "11",
+                "label": "variable",
+                "property": {
+                    "name": "LotArea_log",
+                    "alias": [
+                      "log_of_lot_area"
+                    ],
+                    "variableType": "continuous",
+                    "variableTypeDescription": null,
+                    "description": "Log of lot size in square feet"
+                }
+            },
+            {
+                "id": "12",
+                "label": "variable",
+                "property": {
+                    "name": "Street",
+                    "alias": null,
+                    "variableType": "nominal",
+                    "variableTypeDescription": "Gravel or Paved",
+                    "description": "Type of road access to property"
+                }
+            },
+            {
+                "id": "13",
+                "label": "variable",
+                "property": {
+                    "name": "LotFrontage",
+                    "alias": null,
+                    "variableType": "continuous",
+                    "variableTypeDescription": null,
+                    "description": "Linear feet of street connected to property"
+                }
+            },
+            {
+                "id": "14",
+                "label": "variable",
+                "property": {
+                    "name": "Street_Gravel",
+                    "alias": null,
+                    "variableType": "nominal",
+                    "variableTypeDescription": null,
+                    "description": "Is the type of road gravel"
+                }
+            },
+            {
+                "id": "15",
+                "label": "variable",
+                "property": {
+                    "name": "Street_Paved",
+                    "alias": null,
+                    "variableType": "nominal",
+                    "variableTypeDescription": null,
+                    "description": "Is the type of road paved"
+                }
+            },
+            {
+                "id": "16",
+                "label": "variable",
+                "property": {
+                    "name": "House Price",
+                    "alias": [
+                      "house_price"
+                    ],
+                    "variableType": "continuous",
+                    "variableTypeDescription": null,
+                    "description": "Price at which the house was sold"
+                }
+            },
+            {
+                "id": "17",
+                "label": "variable",
+                "property": {
+                    "name": "log House Price",
+                    "alias": [
+                      "log_house_price"
+                    ],
+                    "variableType": "continuous",
+                    "variableTypeDescription": null,
+                    "description": "Log of price at which the house was sold"
+                }
+            },
+            {
+                "id": "18",
+                "label": "pipe",
+                "property": {
+                    "description": null
+                }
+            },
+            {
+                "id": "19",
+                "label": "pipe",
+                "property": {
+                    "description": null
+                }
+            },
+            {
+                "id": "20",
+                "label": "pipe",
+                "property": {
+                    "description": null
+                }
+            },
+            {
+                "id": "21",
+                "label": "model",
+                "property": {
+                    "algorithm": "Lasso",
+                    "modelAccuracyScore": 0.93,
+                    "modelRocAucScore": -1,
+                    "description": null
+                }
+            },
+            {
+                "id": "22",
+                "label": "author",
+                "property": {
+                    "affiliation": "System",
+                    "emailAddress": "mehdi@system.com",
+                    "name": "Mehdi Jamei",
+                    "orcid": null
+                }
+            },
+            {
+                "id": "23",
+                "label": "association",
+                "subclass": "correlation",
+                "property": {
+                    "value": 0.1,
+                    "unit": "log-loss",
+                    "dependenceStructureValue": null,
+                    "dependenceStructureEffect": null,
+                    "dependenceStructureMethod": null,
+                    "statSignificanceLevel": 0.01,
+                    "standardError": null,
+                    "statSignificance": true,
+                    "statSignificanceMethod": null,
+                    "robustnessTest": null
+                }
+              },
+              {
+                "id": "24",
+                "label": "association",
+                "subclass": "correlation",
+                "property": {
+                    "value": 0.3,
+                    "unit": "log-loss",
+                    "dependenceStructureValue": null,
+                    "dependenceStructureEffect": null,
+                    "dependenceStructureMethod": null,
+                    "statSignificanceLevel": 0.01,
+                    "standardError": null,
+                    "statSignificance": true,
+                    "statSignificanceMethod": null,
+                    "robustnessTest": null
+                }
+              },
+              {
+                "id": "25",
+                "label": "association",
+                "subclass": "correlation",
+                "property": {
+                    "value": 0.05,
+                    "unit": "log-loss",
+                    "dependenceStructureValue": null,
+                    "dependenceStructureEffect": null,
+                    "dependenceStructureMethod": null,
+                    "statSignificanceLevel": 0.01,
+                    "standardError": null,
+                    "statSignificance": true,
+                    "statSignificanceMethod": null,
+                    "robustnessTest": null
+                }
+              },
+              {
+                "id": "26",
+                "label": "association",
+                "subclass": "correlation",
+                "property": {
+                    "value": 0.08,
+                    "unit": "log-loss",
+                    "dependenceStructureValue": null,
+                    "dependenceStructureEffect": null,
+                    "dependenceStructureMethod": null,
+                    "statSignificanceLevel": 0.01,
+                    "standardError": null,
+                    "statSignificance": true,
+                    "statSignificanceMethod": null,
+                    "robustnessTest": null
+                }
+              },
+              {
+                "id": "27",
+                "label": "experiment",
+                "property": {
+                    "description": "Esimating house price."
+                }
+              }
+        ],
+        "edges": [
+            {
+                "source": "4",
+                "relation": "parents",
+                "target": "5",
+                "directed": true
+            },
+            {
+                "source": "5",
+                "relation": "parents",
+                "target": "6",
+                "directed": true
+            },
+            {
+                "source": "6",
+                "relation": "parents",
+                "target": "7",
+                "directed": true
+            },
+            {
+                "source": "1",
+                "relation": "population",
+                "target": "5",
+                "directed": true
+            },
+            {
+                "source": "2",
+                "relation": "population",
+                "target": "6",
+                "directed": true
+            },
+            {
+                "source": "3",
+                "relation": "population",
+                "target": "7",
+                "directed": true
+            },
+            {
+                "source": "10",
+                "relation": "pipe_inputs",
+                "target": "18",
+                "directed": true
+            },
+            {
+                "source": "12",
+                "relation": "pipe_inputs",
+                "target": "19",
+                "directed": true
+            },
+            {
+                "source": "16",
+                "relation": "pipe_inputs",
+                "target": "20",
+                "directed": true
+            },
+            {
+                "source": "18",
+                "relation": "output_variables",
+                "target": "11",
+                "directed": true
+            },
+            {
+                "source": "19",
+                "relation": "output_variables",
+                "target": "14",
+                "directed": true
+            },
+            {
+                "source": "19",
+                "relation": "output_variables",
+                "target": "15",
+                "directed": true
+            },
+            {
+                "source": "20",
+                "relation": "output_variables",
+                "target": "17",
+                "directed": true
+            },
+            {
+                "source": "18",
+                "relation": "operations",
+                "target": "9",
+                "directed": true
+            },
+            {
+                "source": "19",
+                "relation": "operations",
+                "target": "8",
+                "directed": true
+            },
+            {
+                "source": "20",
+                "relation": "operations",
+                "target": "9",
+                "directed": true
+            },
+            {
+                "source": "0",
+                "relation": "population",
+                "target": "7",
+                "directed": true
+            },
+            {
+                "source": "0",
+                "relation": "variables",
+                "target": "10",
+                "directed": true
+            },
+            {
+                "source": "0",
+                "relation": "variables",
+                "target": "12",
+                "directed": true
+            },
+            {
+                "source": "0",
+                "relation": "variables",
+                "target": "13",
+                "directed": true
+            },
+            {
+                "source": "0",
+                "relation": "variables",
+                "target": "16",
+                "directed": true
+            },
+            {
+                "source": "22",
+                "relation": "experiments",
+                "target": "27",
+                "directed": true
+            },
+            {
+                "source": "21",
+                "relation": "experiment",
+                "target": "27",
+                "directed": true
+            },
+            {
+                "source": "21",
+                "relation": "associations",
+                "target": "23",
+                "directed": true
+            },
+            {
+                "source": "21",
+                "relation": "associations",
+                "target": "24",
+                "directed": true
+            },
+            {
+                "source": "21",
+                "relation": "associations",
+                "target": "25",
+                "directed": true
+            },
+            {
+                "source": "21",
+                "relation": "associations",
+                "target": "26",
+                "directed": true
+            },
+            {
+                "source": "23",
+                "relation": "target_variable",
+                "target": "17",
+                "directed": true
+            },
+            {
+                "source": "24",
+                "relation": "target_variable",
+                "target": "17",
+                "directed": true
+            },
+            {
+                "source": "25",
+                "relation": "target_variable",
+                "target": "17",
+                "directed": true
+            },
+            {
+                "source": "26",
+                "relation": "target_variable",
+                "target": "17",
+                "directed": true
+            },
+            {
+                "source": "23",
+                "relation": "source_variable",
+                "target": "15",
+                "directed": true
+            },
+            {
+                "source": "24",
+                "relation": "source_variable",
+                "target": "14",
+                "directed": true
+            },
+            {
+                "source": "25",
+                "relation": "source_variable",
+                "target": "13",
+                "directed": true
+            },
+            {
+                "source": "26",
+                "relation": "source_variable",
+                "target": "11",
+                "directed": true
+            }
+        ]
+    }
+}
